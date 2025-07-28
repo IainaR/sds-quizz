@@ -4,9 +4,10 @@ import json
 import asyncio
 import time
 import unicodedata
+import os
 
 # ----- CONFIGURATION -----
-TOKEN = ''
+TOKEN = os.getenv('TOKEN')
 QUIZZ_CHANNEL_ID = 1392554666591785040 #1392554666591785040
 EMETTEUR_CHANNEL_ID = 1394694775063711844 #1394694775063711844
 ORGANISATEUR_ROLE = 'Game master'
