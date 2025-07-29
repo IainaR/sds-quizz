@@ -5,6 +5,7 @@ import asyncio
 import time
 import unicodedata
 import os
+import logging
 
 # ----- CONFIGURATION -----
 TOKEN = os.getenv('TOKEN')
@@ -207,6 +208,6 @@ async def on_disconnect():
 
 
 # ----- DEMARRAGE -----
-print("Bot prêt à démarrer...")
-print("Personnages chargés :", list(characters.keys()))
+logging.info("Bot prêt à démarrer...")
+logging.info("Personnages chargés :", list(characters.keys()))
 bot.run(TOKEN)
