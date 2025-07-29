@@ -208,6 +208,8 @@ async def on_disconnect():
 
 
 # ----- DEMARRAGE -----
-logging.info("Bot prêt à démarrer...")
-logging.info("Personnages chargés :", list(characters.keys()))
+logger = logging.getLogger(__name__)
+logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
+logger.warning("Bot prêt à démarrer...")
+logger.info("Personnages chargés :", list(characters.keys()))
 bot.run(TOKEN)
